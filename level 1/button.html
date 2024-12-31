@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Color Changing Button</title>
+  <style>
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0; 
+    }
+
+    #colorButton {
+      width:250px;
+      height:20%;
+      padding: 10px 20px;
+      font-size: 26px;
+      font-weight: 800;
+      background-color: lightblue;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <button id="colorButton">Click Me!</button>
+
+  <script>
+    const button = document.getElementById('colorButton');
+
+    button.addEventListener('click', () => {
+      const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+      button.style.backgroundColor = randomColor;
+    });
+  </script>
+</body>
+</html>

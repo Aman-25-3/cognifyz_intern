@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting Message</title>
+</head>
+<body>
+  <script>
+    
+    function getGreeting() {
+      const now = new Date();
+      const hour = now.getHours();
+
+      if (hour < 12) {
+        return "Good Morning!";
+      } else if (hour < 18) {
+        return "Good Afternoon!";
+      } else {
+        return "Good Evening!";
+      }
+    }
+
+    
+    alert(getGreeting());
+  </script>
+</body>
+</html>
